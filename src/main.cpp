@@ -1,11 +1,11 @@
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 int main(int argc, char *argv[])
 {
   // start from 1 to ignore script name; argv[0] will be a name of processing file.
-  for (int i = 1; i < argc; i++) {
-    printf ("argv[%i]: %s\n", i, argv[i]);
-  }
+  assert(argc > 1);
+  printf("Hello %s!", argv[1]);
   return 0;
 }
